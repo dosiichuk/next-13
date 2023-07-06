@@ -1,9 +1,9 @@
-import Button from '@/components/Button';
+import AuthForm from '@/components/AuthForm';
 
 const Signin = () => {
   return (
     <div>
-      signin <Button>Button</Button>
+      <AuthForm mode="signin" />
     </div>
   );
 };
