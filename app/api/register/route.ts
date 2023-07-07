@@ -15,7 +15,7 @@ export async function POST(request: Request) {
     },
   });
   const jwt = await createJWT(user);
-  return new Response('Hello, Next.js!', {
+  return new Response(null, {
     status: 201,
     headers: {
       'Set-Cookie': serialize(process.env.COOKIE_NAME!, jwt, {
