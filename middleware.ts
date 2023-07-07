@@ -23,7 +23,7 @@ export async function middleware(request: NextRequest) {
     PUBLIC_FILE.test(pathname)) {
     return NextResponse.next();
   }
-  // const data = await request.json();
+
   const jwt = request.cookies.get(process.env.COOKIE_NAME!);
   if (!jwt) {
     request.nextUrl.pathname = "/signin";
